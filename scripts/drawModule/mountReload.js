@@ -121,7 +121,7 @@ function disableAllDrawFunctions()
     toggleModify = false
     toggleSnap = false
     thisID=null
-    map.removeInteraction(draw)
-    map.removeInteraction(snap)
-    map.removeInteraction(modify) 
+    drawMap.removeInteraction(draw)
+    drawMap.removeInteraction(snap)
+    drawMap.removeInteraction(modify) 
 }

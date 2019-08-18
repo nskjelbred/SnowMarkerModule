@@ -27,3 +27,6 @@ var browser =
         })
     })
 }
+
+
+snowmarker_init(browser.map);

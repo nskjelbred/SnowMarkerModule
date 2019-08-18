@@ -67,7 +67,7 @@ function createMeasureTooltip(f)
     }
     
     tooltipObjects.push(tooltipObj)
-    map.addOverlay(measureTooltip)
+    drawMap.addOverlay(measureTooltip)
 } //End createMeasureTooltip()
 
 //Function to remove a single area overlay, identified by a feature f.
@@ -80,7 +80,7 @@ function removeSingleMeasureTooltip(f)
         {
             let element = e.element
             element.parentNode.removeChild(element)
-            map.removeOverlay(e.overlay)
+            drawMap.removeOverlay(e.overlay)
             let eIndex = tooltipObjects.indexOf(e)
             tooltipObjects.splice(eIndex, 1)
         }
@@ -95,7 +95,7 @@ function removeAllMeasureTooltip()
     {
         let element = e.element
         element.parentNode.removeChild(element)
-        map.removeOverlay(e.overlay)
+        drawMap.removeOverlay(e.overlay)
     })
     tooltipObjects = []
 } //End removeAllMeasureTooltip()

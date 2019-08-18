@@ -12,7 +12,7 @@ function addDraw()
         type: drawType,
         freehand: toggleFreehand,
     })
-    map.addInteraction(draw)
+    drawMap.addInteraction(draw)
     $('#drawToggle').addClass('selectedFunction')
 
     //Adds style to drawn feature and adds it to the undo Array.
@@ -28,7 +28,7 @@ function addModify()
 {
     //Defines modify interractions.
     modify = new Modify({source: drawSource})
-    map.addInteraction(modify)
+    drawMap.addInteraction(modify)
     $('#modifyToggle').addClass('selectedFunction')
 } //End addModify()
 
@@ -36,28 +36,28 @@ function addModify()
 function addSnap()
 {
     snap = new Snap({source: drawSource})
-    map.addInteraction(snap)
+    drawMap.addInteraction(snap)
     $('#snapToggle').addClass('selectedFunction')
 } //End addSnap()
 
 //Function to disable draw functionality.
 function removeDraw()
 { 
-    map.removeInteraction(draw) 
+    drawMap.removeInteraction(draw) 
     $('#drawToggle').removeClass('selectedFunction')
 } //End removeDraw()
 
 //Function to disable Modify functionality from the map.
 function removeModify() 
 { 
-    map.removeInteraction(modify)
+    drawMap.removeInteraction(modify)
     $('#modifyToggle').removeClass('selectedFunction')
 } //End removeModify()
 
 //Function to disable geometry snapping on draw.
 function removeSnap()
 { 
-    map.removeInteraction(snap)
+    drawMap.removeInteraction(snap)
     $('#snapToggle').removeClass('selectedFunction')
 } //End removeSnap()
 
