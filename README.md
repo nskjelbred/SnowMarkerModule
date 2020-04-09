@@ -1,6 +1,6 @@
 # Snow Marking Module
 This application is a bachelor project made to work with https://github.com/PolaricServer/webapp2<br/>
-It's made by Njaal Dolonen, Nicolay Skjelbred, Jan-Magnus Solheim. 
+It's made by Njaal, N.S, Jan-Magnus. 
 
 The project was to make a marking module that could be used in Search And Rescue operations to better mark areas on the map for information.
 Installation progress is currently only in norwegian. Translation will come.
