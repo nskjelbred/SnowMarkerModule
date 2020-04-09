@@ -1,5 +1,4 @@
-//set this one to change default map name
-var map = browser.map
+
 
 //Set the desired colors underneat with Hex Variables.
 //must contain a string like #fff with values between 0-9 and a-f and 3 or 6 hex decimals

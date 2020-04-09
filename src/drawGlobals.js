@@ -2,7 +2,6 @@
  * Copyright (c) 2019, Njaal Dolonen, Nicolay Skjelbred, Jan-Magnus Solheim. 
  * All rights reserved. See LICENSE for more detail.  
  * */ 
-
 //Import and create predefined calls for functions.
 const Draw = ol.interaction.Draw 
 const Modify = ol.interaction.Modify 
@@ -93,13 +92,26 @@ const cssColors = () => {
 //Default source for drawing.
 let drawSource = new VectorSource()
 let drawLayer = new VectorLayer(
-{ source: drawSource })
-map.addLayer(drawLayer)
+    { source: drawSource }
+)
+let drawMap = null; 
 
-//handle different upper/lowercase variations
-activateFreedraw.toUpperCase
-//check for answer, always false if not a YES variation
-if ( activateFreedraw == "Y" || activateFreedraw == "YES" || activateFreedraw == "JA")
-{ toggleFreehand = true }
-else 
-{ toggleFreehand = false }
+
+
+function snowmarker_init(map) {
+    drawMap = map;
+    drawMap.addLayer(drawLayer)
+
+    //OnClick handler for selecting features.
+    //TODO: Check if conflicting with other onclick handlers
+    drawMap.on('click', (e) =>
+        { manualSelect(e.pixel) })
+
+    //handle different upper/lowercase variations
+    activateFreedraw.toUpperCase
+    //check for answer, always false if not a YES variation
+    if ( activateFreedraw == "Y" || activateFreedraw == "YES" || activateFreedraw == "JA")
+    { toggleFreehand = true }   
+    else 
+    { toggleFreehand = false }
+}

@@ -23,22 +23,24 @@
   <div id="map" class="map"></div>
   <button id="tb_draw" onclick="tb_draw_click()">Show Marking Window</button>
 
-  <script src="scripts/map.js">                         </script>  
-  <script src="scripts/drawModule/drawConfig.js">      </script>
-  <script src="scripts/drawModule/drawGlobals.js">      </script>
-  <script src="scripts/drawModule/drawStyle.js">        </script>
-  <script src="scripts/drawModule/drawFunctions.js">    </script>
-  <script src="scripts/drawModule/drawTooltipHelper.js"></script>
-  <script src="scripts/drawModule/drawEvents.js">       </script>
-  <script src="scripts/drawModule/gpxDownload.js">      </script>
-  <script src="scripts/drawModule/drawIcons.js">        </script>
-  <script src="scripts/drawModule/mithrilDrawBox.js">   </script>
-  <script src="scripts/drawModule/mithrilIcons.js">     </script>
-  <script src="scripts/drawModule/measureTooltip.js">                    </script>
+
+  <script src="src/drawConfig.js">      </script>
+  <script src="src/drawGlobals.js">      </script>
+  <script src="src/drawStyle.js">        </script>
+  <script src="src/drawFunctions.js">    </script>
+  <script src="src/drawTooltipHelper.js"></script>
+  <script src="src/drawEvents.js">       </script>
+  <script src="src/gpxDownload.js">      </script>
+  <script src="src/drawIcons.js">        </script>
+  <script src="src/mithrilDrawBox.js">   </script>
+  <script src="src/mithrilIcons.js">     </script>
+  <script src="src/measureTooltip.js">   </script>
   
   <!-- Test Scripts underneath -->
-  <script src="scripts/testSelectfunctions.js">         </script>
-  <script src="scripts/testUndoFunctions.js">           </script>
-  <script src="scripts/drawModule/mountReload.js">      </script>
+  <script src="src/undoFunctions.js">    </script>
+  <script src="src/mountReload.js">      </script>
+  
+  <!-- Use in a openlayers map -->
+  <script src="src/map.js">              </script>  
 </body>
 </html>

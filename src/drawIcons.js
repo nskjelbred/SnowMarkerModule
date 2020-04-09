@@ -23,7 +23,7 @@ let thisID
 //OnClick hanlder for icon select.
 function markerIcons_click(e)
 {
-  map.removeInteraction(draw)
+  drawMap.removeInteraction(draw)
   $('#'+thisID).removeClass('selectedIcon')
   if( thisID == e.target.id )
   { 
@@ -53,7 +53,7 @@ function markerIcons_click(e)
     type: 'Point',
     name: 'POINT NAME TEST' //TODO: Add description?
   })
-  map.addInteraction(draw)
+  drawMap.addInteraction(draw)
   droppingIcon = true
     
   //When the point is drawn, gives it the icon style and disables drawing.
@@ -63,7 +63,7 @@ function markerIcons_click(e)
     addNewChange(e.feature)
     if( !continuousIconDropping )
     { 
-      map.removeInteraction(draw)
+      drawMap.removeInteraction(draw)
       //Removes the selected icon class and ID after placement.
       $('#'+thisID).removeClass('selectedIcon')
       thisID = null

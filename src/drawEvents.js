@@ -235,7 +235,7 @@ function manualSelect(pixel)
 
     featureCheck = false
     //Checks for features at pixel and toggles Select on them.
-    map.forEachFeatureAtPixel(pixel, function(f) 
+    drawMap.forEachFeatureAtPixel(pixel, function(f) 
     { 
         //Gets the type of the feature.
         fType = f.getGeometry().getType()
@@ -343,10 +343,6 @@ function selectIcons(f)
     { droppingIcon = false }
 } //End selectIcons()
 
-//OnClick handler for selecting features.
-//TODO: Check if conflicting with other onclick handlers
-map.on('click', (e) =>
-{ manualSelect(e.pixel) })
 
 //OnClick handler for selecting geometry type.
 function setCurrentType_click(e)
